@@ -10,7 +10,7 @@ get_header(); ?>
 
 		<div class="row">
 			<div class="col-md-3 hidden-xs hidden-sm">
-				<a class="next-prev-post" href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+				<a class="next-prev-post" href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>"></a>
 			</div>
 			<div class="col-md-6">
 				<header>
@@ -39,10 +39,9 @@ get_header(); ?>
 						<?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
 					</figure>
 				<?php endif; ?>
-
 			</div>
 			<div class="col-md-3 hidden-xs hidden-sm text-right">
-				<a class="next-prev-post" href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				<a class="next-prev-post" href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>"></a>
 			</div>
 		</div>
 
@@ -62,34 +61,47 @@ get_header(); ?>
 				endwhile;
 				?>
 
-				<div class="post-end-links">
-					<a class="arrow arrow-up-gray" href="<?php _e('<!--:es-->/noticias/<!--:--><!--:en-->/news/?lang=en<!--:--><!--:fr-->/nouvelles/?lang=fr<!--:-->'); ?>">Volver a noticias</a>
-				</div>
+				<ul class="post-end-links list-unstyled">
+					<?php if(get_field('post_newsletter_url')): ?>
+						<li>
+							<a class="arrow arrow-up-gray" href="<?php the_field('post_newsletter_url'); ?>">Newsletter</a>
+						</li>
+					<?php endif; ?>
+					<li>
+						<a class="arrow arrow-left-gray" href="<?php _e('<!--:es-->/noticias/<!--:--><!--:en-->/news/?lang=en<!--:--><!--:fr-->/nouvelles/?lang=fr<!--:-->'); ?>">
+							<?php _e('
+								<!--:es-->Volver a Noticias<!--:-->
+								<!--:en-->Back to News<!--:-->
+								<!--:fr-->Retour aux Nouvelles<!--:-->'); ?>
+						</a>
+					</li>
+
+				</ul>
 
 			</div>
 		</div>
 
-		<?php if(get_field('related_links')): ?>
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 related-links">
-					<h3>Links Relacionados</h3>
+			<?php if(get_field('related_links')): ?>
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 related-links">
+						<h3>Links Relacionados</h3>
 
-					<ul class="list-unstyled">
+						<ul class="list-unstyled">
 
-						<?php while(has_sub_field('related_links')): ?>
+							<?php while(has_sub_field('related_links')): ?>
 
-							<li>
-								<a href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?></a>
-								<p><time><?php the_sub_field('link_date'); ?></time></p>
-							</li>
+								<li>
+									<a href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?></a>
+									<p><time><?php the_sub_field('link_date'); ?></time></p>
+								</li>
 
-						<?php endwhile; ?>
+							<?php endwhile; ?>
 
-					</ul>
+						</ul>
+					</div>
 				</div>
-			</div>
-		<?php endif; ?>
+			<?php endif; ?>
 
-	</div>
-</article>
-<?php get_footer(); ?>
+		</div>
+	</article>
+	<?php get_footer(); ?>

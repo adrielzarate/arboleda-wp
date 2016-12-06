@@ -12,7 +12,7 @@ Template Name: News
 	<div class="intro">
 		<div>
 			<h1><?php the_title(); ?></h1>
-			<p>- <?php the_field('subtitle'); ?> -</p>
+			<p>- <?php the_field('intro_subtitle'); ?> -</p>
 
 			<button class="arrow arrow-down-white" id="down"></button>
 		</div>

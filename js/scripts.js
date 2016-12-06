@@ -228,7 +228,7 @@
 
 		//WINES
 		$(".chardonnay-lnk a").click( function(){scrollTo( '#chardonnay', true )} );
-		$(".suavignon-blanc-lnk a").click( function(){scrollTo( '#suavignon-blanc', true )} );
+		$(".sauvignon-blanc-lnk a").click( function(){scrollTo( '#sauvignon-blanc', true )} );
 		$(".pinot-noir-lnk a").click( function(){scrollTo( '#pinot-noir', true )} );
 		$(".carmenere-lnk a").click( function(){scrollTo( '#carmenere', true )} );
 		$(".cabernet-sauvignon-lnk a").click( function(){scrollTo( '#cabernet-sauvignon', true )} );
@@ -236,7 +236,7 @@
 
 		//AWARDS
 		$(".chardonnay-awards-lnk a").click( function(){scrollTo( '#chardonnay-awards', true )} );
-		$(".suavignon-blanc-awards-lnk a").click( function(){scrollTo( '#suavignon-blanc-awards', true )} );
+		$(".sauvignon-blanc-awards-lnk a").click( function(){scrollTo( '#sauvignon-blanc-awards', true )} );
 		$(".pinot-noir-awards-lnk a").click( function(){scrollTo( '#pinot-noir-awards', true )} );
 		$(".carmenere-awards-lnk a").click( function(){scrollTo( '#carmenere-awards', true )} );
 		$(".cabernet-sauvignon-awards-lnk a").click( function(){scrollTo( '#cabernet-sauvignon-awards', true )} );
@@ -324,9 +324,9 @@
 			} else if ( $('#chardonnay').visible() ) {
 				$(".submenu a").removeClass('active');
 				$(".chardonnay-lnk a").addClass('active');
-			} else if ( $('#suavignon-blanc').visible() ) {
+			} else if ( $('#sauvignon-blanc').visible() ) {
 				$(".submenu a").removeClass('active');
-				$(".suavignon-blanc-lnk a").addClass('active');
+				$(".sauvignon-blanc-lnk a").addClass('active');
 			} else if ( $('#pinot-noir').visible() ) {
 				$(".submenu a").removeClass('active');
 				$(".pinot-noir-lnk a").addClass('active');
@@ -342,9 +342,9 @@
 			} else if ( $('#chardonnay-awards').visible() ) {
 				$(".submenu a").removeClass('active');
 				$(".chardonnay-awards-lnk a").addClass('active');
-			} else if ( $('#suavignon-blanc-awards').visible() ) {
+			} else if ( $('#sauvignon-blanc-awards').visible() ) {
 				$(".submenu a").removeClass('active');
-				$(".suavignon-blanc-awards-lnk a").addClass('active');
+				$(".sauvignon-blanc-awards-lnk a").addClass('active');
 			} else if ( $('#pinot-noir-awards').visible() ) {
 				$(".submenu a").removeClass('active');
 				$(".pinot-noir-awards-lnk a").addClass('active');
@@ -370,6 +370,7 @@
 			pagination: '.swiper-pagination',
 			paginationClickable: true,
 			autoplay: 2500,
+			loop: true,
         	autoplayDisableOnInteraction: false
 		});
 

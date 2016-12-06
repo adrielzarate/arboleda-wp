@@ -37,12 +37,16 @@
             ));
           ?>
 
+          <div>
+            <?php if (function_exists('qts_language_menu') ) qts_language_menu('text'); ?>
+          </div>
+
           <?php
-            wp_nav_menu( array(
-              'theme_location' => 'lang-menu',
-              'container' => 'ul',
-              'menu_class'=> 'nav navbar-nav languages',
-            ));
+            // wp_nav_menu( array(
+            //   'theme_location' => 'lang-menu',
+            //   'container' => 'ul',
+            //   'menu_class'=> 'nav navbar-nav languages',
+            // ));
           ?>
 
         </div>

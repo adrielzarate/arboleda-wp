@@ -64,13 +64,9 @@ body > header > nav {
 	display: inline-block;
 }
 
-.main-nav > li > a.active {
-	color: #A7944E;
-}
-
 .main-nav > li > a:hover,
 .main-nav > li > a:focus,
-.main-nav > li > a:active {
+.main-nav > li.active > a {
 	color: #A7944E;
 	background-color: #fff;
 	text-decoration: none;
@@ -125,22 +121,22 @@ body > header > nav {
 .submenu a.active,
 .submenu a:hover,
 .submenu a:focus{
-	color: #000;
 	font-weight: bold;
 }
 
-.nav.languages {
+.qts-lang-menu {
 	margin-top: -50px;
 	margin-right: 10px;
 	float: right;
 }
 
-.nav.languages li {
+.qts-lang-menu li {
 	display: inline-block;
 	padding: 0 5px;
+	margin: 0;
 }
 
-.nav.languages a {
+.qts-lang-menu a {
 	font-family: 'Cinzel', serif;
 	text-transform: uppercase;
 	display: inline-block;
@@ -150,15 +146,22 @@ body > header > nav {
 	height: 30px;
 	font-size: 12px;
 	opacity: .6;
-	padding-top: 4px;
+	padding-top: 7px;
 	text-align: center;
 }
 
-.currentLang-es .nav.languages li:first-child a,
-.currentLang-en .nav.languages li:nth-child(2) a,
-.currentLang-fr .nav.languages li:last-child a,
-.nav.languages a:hover,
-.nav.languages a:focus {
+.qts-lang-menu a:before {
+	font-family: 'Cinzel', serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	opacity: .6;
+	display: inline-block;
+	color: #fff;
+}
+
+.qts-lang-menu li.current-menu-item a,
+.qts-lang-menu a:hover,
+.qts-lang-menu a:focus {
 	opacity: 1;
 	color: #fff;
 	background-color: #A7944E;
@@ -451,6 +454,10 @@ footer {
 	background-image: url(../img/down-arrow-gray.svg);
 }
 
+.arrow-left-gray:before {
+	background-image: url(../img/left-arrow-gray.svg);
+}
+
 button.arrow {
 	background-color: transparent;
 	border: none;
@@ -548,12 +555,11 @@ hr {
 	margin-bottom: -310px;
 }
 
-.emily-faulconer figure > div {
-	background-image: url(../img/about/emily-faulconer-bn.jpg);
-}
-
-.carlos-carrasco {
+.people-working {
 	margin-top: 270px;
+}
+.people-working figure > div {
+	background-image: url(../img/about/people-working.jpg);
 }
 
 .carlos-carrasco figure > div {
@@ -840,6 +846,10 @@ hr {
 	background-repeat: no-repeat;
 }
 
+#wines .download-tecnical-info a:hover:before {
+	background-image: url(../img/down-arrow-brown.svg);
+}
+
 #wines .wine-info .row {
 	margin-top: 50px;
 	margin-bottom: 0px;
@@ -856,7 +866,7 @@ hr {
 #chardonnay-content .decorator-img {
 	background-image: url(../img/wines/chardonnay-img.jpg);
 }
-#suavignon-blanc-content .decorator-img {
+#sauvignon-blanc-content .decorator-img {
 	background-image: url(../img/wines/sauvigon-blanc-img.jpg);
 }
 #pinot-noir-content .decorator-img {
@@ -1052,7 +1062,7 @@ hr {
 }
 
 #news article h2 {
-	font-size: 20px;
+	font-size: 18px;
 	letter-spacing: 1px;
 	line-height: 1.5;
 	margin-bottom: 20px;
@@ -1088,7 +1098,7 @@ hr {
 }
 
 #post header {
-	margin: 100px 0 50px;
+	margin: 90px 0 50px;
 }
 
 #post .featured-image img {
@@ -1138,11 +1148,18 @@ hr {
 	margin-bottom: 20px;
 }
 
+#post .post-end-links {
+	margin-top: 60px;
+}
+
+#post .post-end-links li {
+	margin-top: 20px;
+}
+
 #post .post-end-links a {
 	font-size: 14px;
 	display: block;
 	font-style: italic;
-	margin-top: 60px;
 }
 
 #post .related-links {
@@ -1290,8 +1307,12 @@ footer .social-nets {
 	justify-content: flex-end;
 }
 
-footer .social-nets span{
-	margin-right: 10px;
+footer .social-nets .contact-title{
+	color: #58585B;
+	font-size: 12px;
+    margin-right: 10px;
+    padding-bottom: 4px;
+    display: inline-block;
 }
 
 footer .social-nets ul {
@@ -1350,6 +1371,7 @@ footer .social-nets ul a {
 	margin-bottom: 40px;
 	padding-bottom: 0;
 	padding-left: 90px;
+	border-radius: 0;
 }
 
 #mailingList.modal .form-control:focus {
@@ -1556,7 +1578,7 @@ footer .social-nets ul a {
 		padding: 10px 0;
 	}
 
-	.nav.languages {
+	.qts-lang-menu {
 		float: none;
 		margin-top: 0;
 		padding: 15px 15px 15px 0px;
@@ -1673,7 +1695,7 @@ footer .social-nets ul a {
 
 @media screen and (max-width: 767px) {
 
-	.nav.languages {
+	.qts-lang-menu {
 		padding-left: 10px;
 	}
 

@@ -12,220 +12,69 @@ Template Name: Awards
 	<div class="intro">
 		<div>
 			<h1><?php the_title(); ?></h1>
-			<p>- <?php the_field('subtitle'); ?> -</p>
+			<p>- <?php the_field('intro_subtitle'); ?> -</p>
 			<button class="arrow arrow-down-white" id="down"></button>
 		</div>
 	</div>
 
 	<div class="container">
 
-		<div id="chardonnay-awards" class="position-flag"></div>
-		<div class="row wine-award">
+	<?php if( have_rows('awarded_wine') ): ?>
 
-			<div class="col-md-3">
-				<img src="img/wines/chardonnay-bottle.png" alt="" style="max-width:150px; margin:auto; display:block;">
-			</div>
+		<?php while( have_rows('awarded_wine') ): the_row(); ?>
 
-			<div class="col-md-8">
+			<div id="<?php the_sub_field('awarded_wine_select'); ?>" class="position-flag"></div>
 
-				<h2 class="text-center">Chardonnay 2015</h2>
-				<h3 class="text-center">Aconcagua Costa</h3>
+			<div class="row wine-award">
 
-				<div class="years-awards-container">
-					<ul>
-						<li class="row swiper-slide" data-year="2015">
-							<div class="col-md-12 text-center">
-								<a class="arrow arrow-down-gray download-pdf" href="#">See All (PDF)</a>
-							</div>
-							<div class="awards-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-2.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-2 next-prev-menu">
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
-							</div>
-						</li>
-
-						<li class="row swiper-slide" data-year="2014">
-							<div class="col-md-12 text-center">
-								<a class="arrow arrow-down-gray download-pdf" href="#">See All (PDF)</a>
-							</div>
-							<div class="awards-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-2.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-2 next-prev-menu">
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
-							</div>
-						</li>
-
-						<li class="row swiper-slide" data-year="2013">
-							<div class="col-md-12 text-center">
-								<a class="arrow arrow-down-gray download-pdf" href="#">See All (PDF)</a>
-							</div>
-							<div class="awards-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-2.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-2 next-prev-menu">
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
-							</div>
-						</li>
-
-					</ul>
+				<div class="col-md-3">
+					<img src="<?php the_sub_field('awarded_wine_bottle'); ?>" alt="" style="max-width:150px; margin:auto; display:block;">
 				</div>
 
-			</div>
-		</div>
+				<div class="col-md-8">
 
-		<div id="suavignon-blanc-awards" class="position-flag"></div>
-		<div class="row wine-award">
+					<h2 class="text-center"><?php the_sub_field('awarded_wine_name'); ?></h2>
+					<h3 class="text-center"><?php the_sub_field('awarded_wine_place'); ?></h3>
 
-			<div class="col-md-3">
-				<img src="img/wines/chardonnay-bottle.png" alt="" style="max-width:150px; margin:auto; display:block;">
-			</div>
+					<?php if( have_rows('awarded_wine_year_gallery') ): ?>
+						<div class="years-awards-container">
+							<ul>
+							<?php while( have_rows('awarded_wine_year_gallery') ): the_row(); ?>
 
-			<div class="col-md-8">
+								<li class="row swiper-slide" data-year="<?php the_sub_field('awarded_wine_year'); ?>">
+									<div class="col-md-12 text-center">
+										<a class="arrow arrow-down-gray download-pdf" href="<?php the_sub_field('awarded_wine_year_pdf'); ?>">See All (PDF)</a>
+									</div>
 
-				<h2 class="text-center">Chardonnay 2015</h2>
-				<h3 class="text-center">Aconcagua Costa</h3>
+									<?php if( have_rows('awards_gallery') ): ?>
+										<div class="awards-container">
+											<div class="swiper-wrapper">
 
-				<div class="years-awards-container">
-					<ul>
-						<li class="row swiper-slide" data-year="2015">
-							<div class="col-md-12 text-center">
-								<a class="arrow arrow-down-gray download-pdf" href="#">See All (PDF)</a>
-							</div>
-							<div class="awards-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-2.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-2 next-prev-menu">
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
-							</div>
-						</li>
+											<?php while( have_rows('awards_gallery') ): the_row(); ?>
+												<div class="swiper-slide">
+													<img class="img-responsive" src="<?php the_sub_field('awards_gallery_picture'); ?>" alt="">
+												</div>
+											<?php endwhile; ?>
 
-						<li class="row swiper-slide" data-year="2014">
-							<div class="col-md-12 text-center">
-								<a class="arrow arrow-down-gray download-pdf" href="#">See All (PDF)</a>
-							</div>
-							<div class="awards-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-2.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-2 next-prev-menu">
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
-							</div>
-						</li>
+											</div>
+										</div>
+										<div class="col-xs-2 next-prev-menu">
+											<div class="swiper-button-next"></div>
+											<div class="swiper-button-prev"></div>
+										</div>
+									<?php endif; ?>
+								</li>
+							<?php endwhile; ?>
+							</ul>
+						</div>
 
-						<li class="row swiper-slide" data-year="2013">
-							<div class="col-md-12 text-center">
-								<a class="arrow arrow-down-gray download-pdf" href="#">See All (PDF)</a>
-							</div>
-							<div class="awards-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-2.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-3.jpg" alt="">
-									</div>
-									<div class="swiper-slide">
-										<img class="img-responsive" src="img/awards/banner-4.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-2 next-prev-menu">
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
-							</div>
-						</li>
+					<?php endif; ?>
 
-					</ul>
 				</div>
-
 			</div>
-		</div>
+
+		<?php endwhile; ?>
+	<?php endif; ?>
 
 	</div>
 </article>
