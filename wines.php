@@ -30,23 +30,23 @@ Template Name: Wines
 					<div class="col-sm-7 text-center">
 						<h2>chardonnay</h2>
 						<h3><?php the_field('chardonnay_place'); ?></h3>
-						<div class="download-tecnical-info">
-							<span>
-					          <?php _e('
-					          <!--:es-->Ficha Técnica<!--:-->
-					          <!--:en-->Technical Sheet<!--:-->
-					          <!--:fr-->Fiche Technique<!--:-->'); ?>
-							</span>
-					        <?php if(get_field('chardonnay_data_sheet')): ?>
-					          <ul class="list-inline">
-					              <?php while(has_sub_field('chardonnay_data_sheet')): ?>
-					                <li>
-					                  <a href="<?php the_sub_field('chardonnay_file'); ?>"><?php the_sub_field('chardonnay_file_title'); ?></a>
-					                </li>
-					              <?php endwhile; ?>
-					            </ul>
-					        <?php endif; ?>
-						</div>
+						<?php if(get_field('chardonnay_data_sheet')): ?>
+							<div class="download-tecnical-info">
+								<span>
+						          <?php _e('
+						          <!--:es-->Ficha Técnica<!--:-->
+						          <!--:en-->Technical Sheet<!--:-->
+						          <!--:fr-->Fiche Technique<!--:-->'); ?>
+								</span>
+								<ul class="list-inline">
+									<?php while(has_sub_field('chardonnay_data_sheet')): ?>
+										<li>
+											<a href="<?php the_sub_field('chardonnay_file'); ?>"><?php the_sub_field('chardonnay_file_title'); ?></a>
+										</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
 					</div>
 					<div class="col-sm-5">
 						<p><?php the_field('chardonnay_content'); ?></p>
@@ -66,23 +66,23 @@ Template Name: Wines
 					<div class="col-sm-7 text-center">
 						<h2>Sauvignon Blanc</h2>
 						<h3><?php the_field('sauvignon_blanc_place'); ?></h3>
-						<div class="download-tecnical-info">
-							<span>
-					          <?php _e('
-					          <!--:es-->Ficha Técnica<!--:-->
-					          <!--:en-->Technical Sheet<!--:-->
-					          <!--:fr-->Fiche Technique<!--:-->'); ?>
-							</span>
-					        <?php if(get_field('sauvignon_blanc_data_sheet')): ?>
-					          <ul class="list-inline">
-					              <?php while(has_sub_field('sauvignon_blanc_data_sheet')): ?>
-					                <li>
-					                  <a href="<?php the_sub_field('sauvignon_blanc_file'); ?>"><?php the_sub_field('sauvignon_blanc_file_title'); ?></a>
-					                </li>
-					              <?php endwhile; ?>
-					            </ul>
-					        <?php endif; ?>
-						</div>
+						<?php if(get_field('sauvignon_blanc_data_sheet')): ?>
+							<div class="download-tecnical-info">
+								<span>
+						          <?php _e('
+						          <!--:es-->Ficha Técnica<!--:-->
+						          <!--:en-->Technical Sheet<!--:-->
+						          <!--:fr-->Fiche Technique<!--:-->'); ?>
+								</span>
+								<ul class="list-inline">
+									<?php while(has_sub_field('sauvignon_blanc_data_sheet')): ?>
+										<li>
+											<a href="<?php the_sub_field('sauvignon_blanc_file'); ?>"><?php the_sub_field('sauvignon_blanc_file_title'); ?></a>
+										</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
 					</div>
 					<div class="col-sm-5">
 						<p><?php the_field('sauvignon_blanc_content'); ?></p>
@@ -102,23 +102,24 @@ Template Name: Wines
 					<div class="col-sm-7 text-center">
 						<h2>Pinot Noir</h2>
 						<h3><?php the_field('pinot_noir_place'); ?></h3>
-						<div class="download-tecnical-info">
-							<span>
-					          <?php _e('
-					          <!--:es-->Ficha Técnica<!--:-->
-					          <!--:en-->Technical Sheet<!--:-->
-					          <!--:fr-->Fiche Technique<!--:-->'); ?>
-							</span>
-					        <?php if(get_field('pinot_noir_data_sheet')): ?>
-					          <ul class="list-inline">
-					              <?php while(has_sub_field('pinot_noir_data_sheet')): ?>
-					                <li>
-					                  <a href="<?php the_sub_field('pinot_noir_file'); ?>"><?php the_sub_field('pinot_noir_file_title'); ?></a>
-					                </li>
-					              <?php endwhile; ?>
-					            </ul>
-					        <?php endif; ?>
-						</div>
+						<?php if(get_field('pinot_noir_data_sheet')): ?>
+							<div class="download-tecnical-info">
+								<span>
+								<?php _e('
+									<!--:es-->Ficha Técnica<!--:-->
+									<!--:en-->Technical Sheet<!--:-->
+									<!--:fr-->Fiche Technique<!--:-->'); ?>
+								</span>
+
+								<ul class="list-inline">
+									<?php while(has_sub_field('pinot_noir_data_sheet')): ?>
+										<li>
+											<a href="<?php the_sub_field('pinot_noir_file'); ?>"><?php the_sub_field('pinot_noir_file_title'); ?></a>
+										</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
 					</div>
 					<div class="col-sm-5">
 						<p><?php the_field('pinot_noir_content'); ?></p>
@@ -138,23 +139,23 @@ Template Name: Wines
 					<div class="col-sm-7 text-center">
 						<h2>Carmenere</h2>
 						<h3><?php the_field('carmenere_place'); ?></h3>
-						<div class="download-tecnical-info">
-							<span>
-					          <?php _e('
-					          <!--:es-->Ficha Técnica<!--:-->
-					          <!--:en-->Technical Sheet<!--:-->
-					          <!--:fr-->Fiche Technique<!--:-->'); ?>
-							</span>
-					        <?php if(get_field('carmenere_data_sheet')): ?>
-					          <ul class="list-inline">
-					              <?php while(has_sub_field('carmenere_data_sheet')): ?>
-					                <li>
-					                  <a href="<?php the_sub_field('carmenere_file'); ?>"><?php the_sub_field('carmenere_file_title'); ?></a>
-					                </li>
-					              <?php endwhile; ?>
-					            </ul>
-					        <?php endif; ?>
-						</div>
+						<?php if(get_field('carmenere_data_sheet')): ?>
+							<div class="download-tecnical-info">
+								<span>
+								<?php _e('
+									<!--:es-->Ficha Técnica<!--:-->
+									<!--:en-->Technical Sheet<!--:-->
+									<!--:fr-->Fiche Technique<!--:-->'); ?>
+								</span>
+								<ul class="list-inline">
+									<?php while(has_sub_field('carmenere_data_sheet')): ?>
+										<li>
+											<a href="<?php the_sub_field('carmenere_file'); ?>"><?php the_sub_field('carmenere_file_title'); ?></a>
+										</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
 					</div>
 					<div class="col-sm-5">
 						<p><?php the_field('carmenere_content'); ?></p>
@@ -174,23 +175,23 @@ Template Name: Wines
 					<div class="col-sm-7 text-center">
 						<h2>Cabernet</h2>
 						<h3><?php the_field('cabernet_place'); ?></h3>
-						<div class="download-tecnical-info">
-							<span>
-					          <?php _e('
-					          <!--:es-->Ficha Técnica<!--:-->
-					          <!--:en-->Technical Sheet<!--:-->
-					          <!--:fr-->Fiche Technique<!--:-->'); ?>
-							</span>
-					        <?php if(get_field('cabernet_data_sheet')): ?>
-					          <ul class="list-inline">
-					              <?php while(has_sub_field('cabernet_data_sheet')): ?>
-					                <li>
-					                  <a href="<?php the_sub_field('cabernet_file'); ?>"><?php the_sub_field('cabernet_file_title'); ?></a>
-					                </li>
-					              <?php endwhile; ?>
-					            </ul>
-					        <?php endif; ?>
-						</div>
+						<?php if(get_field('cabernet_data_sheet')): ?>
+							<div class="download-tecnical-info">
+								<span>
+								<?php _e('
+									<!--:es-->Ficha Técnica<!--:-->
+									<!--:en-->Technical Sheet<!--:-->
+									<!--:fr-->Fiche Technique<!--:-->'); ?>
+								</span>
+								<ul class="list-inline">
+									<?php while(has_sub_field('cabernet_data_sheet')): ?>
+										<li>
+											<a href="<?php the_sub_field('cabernet_file'); ?>"><?php the_sub_field('cabernet_file_title'); ?></a>
+										</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
 					</div>
 					<div class="col-sm-5">
 						<p><?php the_field('cabernet_content'); ?></p>
@@ -210,23 +211,23 @@ Template Name: Wines
 					<div class="col-sm-7 text-center">
 						<h2>Syrah</h2>
 						<h3><?php the_field('syrah_place'); ?></h3>
-						<div class="download-tecnical-info">
-							<span>
-					          <?php _e('
-					          <!--:es-->Ficha Técnica<!--:-->
-					          <!--:en-->Technical Sheet<!--:-->
-					          <!--:fr-->Fiche Technique<!--:-->'); ?>
-							</span>
-							<?php if(get_field('syrah_data_sheet')): ?>
-					          <ul class="list-inline">
-					              <?php while(has_sub_field('syrah_data_sheet')): ?>
-					                <li>
-					                  <a href="<?php the_sub_field('syrah_file'); ?>"><?php the_sub_field('syrah_file_title'); ?></a>
-					                </li>
-					              <?php endwhile; ?>
-					            </ul>
-					        <?php endif; ?>
-						</div>
+						<?php if(get_field('syrah_data_sheet')): ?>
+							<div class="download-tecnical-info">
+								<span>
+						          <?php _e('
+						          <!--:es-->Ficha Técnica<!--:-->
+						          <!--:en-->Technical Sheet<!--:-->
+						          <!--:fr-->Fiche Technique<!--:-->'); ?>
+								</span>
+								<ul class="list-inline">
+									<?php while(has_sub_field('syrah_data_sheet')): ?>
+										<li>
+											<a href="<?php the_sub_field('syrah_file'); ?>"><?php the_sub_field('syrah_file_title'); ?></a>
+										</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
 					</div>
 					<div class="col-sm-5">
 						<p><?php the_field('syrah_content'); ?></p>

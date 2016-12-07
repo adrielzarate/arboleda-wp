@@ -10,7 +10,7 @@ get_header(); ?>
 
 		<div class="row">
 			<div class="col-md-3 hidden-xs hidden-sm">
-				<a class="next-prev-post" href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>"></a>
+				<a class="next-prev-post long-arrow-prev" href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>"></a>
 			</div>
 			<div class="col-md-6">
 				<header>
@@ -41,7 +41,7 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 			<div class="col-md-3 hidden-xs hidden-sm text-right">
-				<a class="next-prev-post" href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>"></a>
+				<a class="next-prev-post long-arrow-next" href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>"></a>
 			</div>
 		</div>
 

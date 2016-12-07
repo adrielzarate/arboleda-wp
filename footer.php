@@ -61,7 +61,7 @@
                 <!--:fr-->Joindre à la liste de diffusion préférée<!--:-->'); ?>
               </h2>
 
-              <form>
+<!--               <form>
                 <p>
                   <?php _e("
                     <!--:es-->Para seguir las Últimas Noticias de Arboleda, únete a nuestra lista de correo preferida.<!--:-->
@@ -105,7 +105,9 @@
                     <!--:en-->Submit<!--:-->
                     <!--:fr-->Soumettre<!--:-->'); ?>
                 </button>
-              </form>
+              </form> -->
+
+              <?php echo do_shortcode('[rainmaker_form id="205"]'); ?>
 
               <div class="thanks">
                 <h2>

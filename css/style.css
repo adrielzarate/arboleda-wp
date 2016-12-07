@@ -1,6 +1,6 @@
 /* DELETE */
 .navbar-fixed-top {
-	top: 30px;
+	/* top: 30px; */
 }
 
 * {
@@ -54,6 +54,10 @@ body > header > nav {
 .main-nav > li {
 	width: 100%;
 	overflow: hidden;
+}
+
+.main-nav > li.home {
+	text-align: right;
 }
 
 .main-nav > li > a {
@@ -200,7 +204,8 @@ a {
 	color: #58585B;
 }
 
-a:hover {
+a:hover,
+a:focus {
 	text-decoration: none;
 	color: #A7944E;
 }
@@ -456,6 +461,14 @@ footer {
 
 .arrow-left-gray:before {
 	background-image: url(../img/left-arrow-gray.svg);
+}
+
+.long-arrow-prev {
+	background-image: url(../img/long-arrow-left.svg);
+}
+
+.long-arrow-next {
+	background-image: url(../img/long-arrow-right.svg);
 }
 
 button.arrow {
@@ -973,6 +986,11 @@ hr {
 	right: 30px;
 }
 
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+	opacity: 0;
+}
+
 .next-prev-menu {
 	position: absolute;
 	right: 0;
@@ -1061,6 +1079,10 @@ hr {
 	color: #3e3e40;
 }
 
+#news article {
+	min-height: 567px;
+}
+
 #news article h2 {
 	font-size: 18px;
 	letter-spacing: 1px;
@@ -1084,6 +1106,30 @@ hr {
 	height: 12px;
 	width: 12px;
 	margin-right: 10px;
+}
+
+#news .blog-pagination a {
+	display: inline-block;
+	padding: 0;
+	margin-top: 30px;
+}
+
+#news .blog-pagination a:before {
+	content: "";
+	display: inline-block;
+	margin-right: 5px;
+	background-image: url(../img/left-arrow-gray.svg);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 20px;
+    margin-bottom: -6px;
+    margin-left: 30px;
+}
+
+#news .blog-pagination a:hover,
+#news .blog-pagination a:focus {
+	background-color: transparent;
+	color: #A7944E;
 }
 
 /**
@@ -1125,7 +1171,13 @@ hr {
 #post .next-prev-post {
 	margin: 100px 0 50px;
 	display: block;
-	font-size: 30px;
+	background-repeat: no-repeat;
+	background-size: 50px;
+	height: 20px;
+}
+
+#post .next-prev-post.long-arrow-next {
+	background-position: right center;
 }
 
 #post .swiper-container img {
@@ -1690,7 +1742,6 @@ footer .social-nets ul a {
 	body > footer .social-nets {
 		text-align: center;
 	}
-
 }
 
 @media screen and (max-width: 767px) {
@@ -1724,6 +1775,10 @@ footer .social-nets ul a {
 
 	.carlos-carrasco {
 		margin-top: 0;
+	}
+
+	#news article {
+		min-height: 0;
 	}
 
 	#awards h2 {

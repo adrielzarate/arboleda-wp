@@ -25,6 +25,10 @@ Template Name: News
 			<?php
 				$args = array('post_type'=>'post');
 				$the_query = new WP_Query( $args );
+
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$the_query = new WP_Query( 'cat=1&paged=' . $paged );
+
 				if( $the_query->have_posts() ):
 			?>
 				<?php
@@ -46,6 +50,31 @@ Template Name: News
 						</a>
 					</article>
 				<?php endwhile; ?>
+
+				<nav class="col-sm-12 blog-pagination">
+					<?php
+
+					$old_posts_lang = '';
+					$new_posts_lang = '';
+
+					if (qtranxf_getLanguage() == 'es'){
+						$old_posts_lang = 'Entradas anteriores';
+						$new_posts_lang = 'Entradas recientes';
+					}
+					elseif (qtranxf_getLanguage() == 'en'){
+						$old_posts_lang = 'Older Entries';
+						$new_posts_lang = 'Newer Entries';
+					}
+					elseif (qtranxf_getLanguage() == 'fr'){
+						$old_posts_lang = 'Entrées plus anciennes';
+						$new_posts_lang = 'Entrées plus récentes';
+					}
+
+					next_posts_link( $old_posts_lang, $the_query->max_num_pages );
+					previous_posts_link( $new_posts_lang );
+					?>
+				</nav>
+
 			<?php else: ?>
 				<h2>
 		          <?php _e('

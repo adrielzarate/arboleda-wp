@@ -257,7 +257,7 @@
 		* news page scripts
 		*
 		*/
-		$('#news article').height( getMaxHeightEl('#news article') );
+		// $('#news article').height( getMaxHeightEl('#news article') );
 
 		/**
 		*
