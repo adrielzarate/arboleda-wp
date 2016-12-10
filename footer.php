@@ -17,7 +17,12 @@
       </div>
 
       <div class="col-md-4 mailing-list text-center">
-        <a id="join" href="#" data-toggle="modal" data-target="#mailingList">Join Preferred Mailing List</a>
+        <a id="join" href="#" data-toggle="modal" data-target="#mailingList">
+          <?php _e('
+            <!--:es-->Unase a nuestra lista de correo<!--:-->
+            <!--:en-->Join Preferred Mailing List<!--:-->
+            <!--:fr-->Adhérer à la liste de diffusion préférée<!--:-->'); ?>
+        </a>
       </div>
 
       <div class="col-md-4 social-nets text-right">

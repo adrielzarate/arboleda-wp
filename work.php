@@ -20,13 +20,13 @@ Template Name: Work
 
 		<div id="sustainability" class="position-flag"></div>
 		<div class="row align-middle section" id="sustainability-content" data-aos="fade-up" data-aos-once="true">
-			<div class="col-md-4 text-right">
+			<div class="col-md-5 col-lg-4 text-right">
 				<img class="sustainable-wine-logo" src="<?php bloginfo('template_url'); ?>/img/work/sustainable-wine.jpg" alt="sustainable wine logo">
 				<h2><?php the_field('sustaintability_title'); ?></h2>
 				<br>
 				<p><?php the_field('sustaintability_content'); ?></p>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-7 col-lg-8">
 				<img src="<?php bloginfo('template_url'); ?>/img/work/sustentability.jpg" alt="sustentability">
 			</div>
 		</div>
@@ -91,23 +91,15 @@ Template Name: Work
 
 		<div id="winemaking" class="position-flag"></div>
 		<div class="row align-middle section" id="winemaking-content" data-aos="fade-up" data-aos-once="true">
-			<div class="col-md-8">
+			<div class="col-md-7 col-lg-8">
 				<img src="<?php bloginfo('template_url'); ?>/img/work/winemaking.jpg" alt="Winemaking">
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-5 col-lg-4">
 				<h2><?php the_field('winemaking_tile'); ?></h2>
 				<p><?php the_field('winemaking_content'); ?></p>
 			</div>
 		</div>
 	</div>
 </article>
-<div class="swiper-container">
-	<div class="swiper-wrapper">
-		<div class="swiper-slide"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/aconcagua-costa.jpg" alt=""></div>
-		<div class="swiper-slide"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/aconcagua-costa.jpg" alt=""></div>
-		<div class="swiper-slide"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/aconcagua-costa.jpg" alt=""></div>
-	</div>
-	<div class="swiper-pagination"></div>
-</div>
 
 <?php get_footer(); ?>

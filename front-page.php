@@ -26,13 +26,13 @@
 
     <div id="philosophy" class="position-flag"></div>
     <div class="row align-middle section" id="philosophy-content" data-aos="fade-up" data-aos-once="true">
-      <div class="col-sm-4 col-sm-push-8">
+      <div class="col-sm-6 col-sm-push-6 col-md-4 col-md-push-8">
         <div>
           <h2><?php the_field('philosophy_title'); ?></h2>
           <p><?php the_field('philosophy_content'); ?></p>
         </div>
       </div>
-      <div class="col-sm-8 col-sm-pull-4">
+      <div class="col-sm-6 col-sm-pull-6 col-md-8 col-md-pull-4">
 
         <?php if(get_field('philosophy_gallery')): ?>
           <div class="swiper-container">
@@ -46,17 +46,16 @@
             <div class="swiper-pagination"></div>
           </div>
         <?php endif; ?>
-
       </div>
     </div>
 
     <div id="founder" class="position-flag"></div>
     <div class="row align-middle section" id="founder-content" data-aos="fade-up" data-aos-once="true">
-      <div class="col-sm-4 text-right">
+      <div class="col-sm-6 col-md-4 text-right">
         <h2><?php the_field('founder_title'); ?></h2>
         <p><?php the_field('founder_content'); ?></p>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-6 col-md-8">
         <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/about/founder.jpg" alt="">
       </div>
     </div>
@@ -86,7 +85,7 @@
         </figure>
       </div>
 
-      <div class="col-sm-6 col-md-4 people-working" data-aos="fade-up" data-aos-once="true">
+      <div class="col-sm-6 col-md-4 people-working hidden-sm hidden-xs" data-aos="fade-up" data-aos-once="true">
         <figure>
           <div class="hover-show">
             <img src="<?php bloginfo('template_url'); ?>/img/about/people-working.jpg" alt="">

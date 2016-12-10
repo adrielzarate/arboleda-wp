@@ -28,13 +28,14 @@ Template Name: Awards
 			<div class="row wine-award">
 
 				<div class="col-md-3">
-					<img src="<?php the_sub_field('awarded_wine_bottle'); ?>" alt="" style="max-width:150px; margin:auto; display:block;">
+					<img class="bottle" src="<?php the_sub_field('awarded_wine_bottle'); ?>" alt="">
 				</div>
 
 				<div class="col-md-8">
 
 					<h2 class="text-center"><?php the_sub_field('awarded_wine_name'); ?></h2>
 					<h3 class="text-center"><?php the_sub_field('awarded_wine_place'); ?></h3>
+					<a class="arrow arrow-down-gray download-pdf text-center" href="<?php the_sub_field('awarded_wine_year_pdf'); ?>">See All (PDF)</a>
 
 					<?php if( have_rows('awarded_wine_year_gallery') ): ?>
 						<div class="years-awards-container">
@@ -42,9 +43,6 @@ Template Name: Awards
 							<?php while( have_rows('awarded_wine_year_gallery') ): the_row(); ?>
 
 								<li class="row swiper-slide" data-year="<?php the_sub_field('awarded_wine_year'); ?>">
-									<div class="col-md-12 text-center">
-										<a class="arrow arrow-down-gray download-pdf" href="<?php the_sub_field('awarded_wine_year_pdf'); ?>">See All (PDF)</a>
-									</div>
 
 									<?php if( have_rows('awards_gallery') ): ?>
 										<div class="awards-container">
@@ -78,13 +76,5 @@ Template Name: Awards
 
 	</div>
 </article>
-<div class="swiper-container">
-	<div class="swiper-wrapper">
-		<div class="swiper-slide"><img class="img-responsive" src="img/vineyards/aconcagua-costa.jpg" alt=""></div>
-		<div class="swiper-slide"><img class="img-responsive" src="img/vineyards/aconcagua-costa.jpg" alt=""></div>
-		<div class="swiper-slide"><img class="img-responsive" src="img/vineyards/aconcagua-costa.jpg" alt=""></div>
-	</div>
-	<div class="swiper-pagination"></div>
-</div>
 
 <?php get_footer(); ?>

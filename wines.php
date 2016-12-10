@@ -41,7 +41,7 @@ Template Name: Wines
 								<ul class="list-inline">
 									<?php while(has_sub_field('chardonnay_data_sheet')): ?>
 										<li>
-											<a href="<?php the_sub_field('chardonnay_file'); ?>"><?php the_sub_field('chardonnay_file_title'); ?></a>
+											<a href="<?php the_sub_field('chardonnay_file'); ?>"><?php the_sub_field('chardonnay_file_year'); ?></a>
 										</li>
 									<?php endwhile; ?>
 								</ul>
@@ -77,7 +77,7 @@ Template Name: Wines
 								<ul class="list-inline">
 									<?php while(has_sub_field('sauvignon_blanc_data_sheet')): ?>
 										<li>
-											<a href="<?php the_sub_field('sauvignon_blanc_file'); ?>"><?php the_sub_field('sauvignon_blanc_file_title'); ?></a>
+											<a href="<?php the_sub_field('sauvignon_blanc_file'); ?>"><?php the_sub_field('sauvignon_blanc_file_year'); ?></a>
 										</li>
 									<?php endwhile; ?>
 								</ul>
@@ -114,7 +114,7 @@ Template Name: Wines
 								<ul class="list-inline">
 									<?php while(has_sub_field('pinot_noir_data_sheet')): ?>
 										<li>
-											<a href="<?php the_sub_field('pinot_noir_file'); ?>"><?php the_sub_field('pinot_noir_file_title'); ?></a>
+											<a href="<?php the_sub_field('pinot_noir_file'); ?>"><?php the_sub_field('pinot_noir_file_year'); ?></a>
 										</li>
 									<?php endwhile; ?>
 								</ul>
@@ -150,7 +150,7 @@ Template Name: Wines
 								<ul class="list-inline">
 									<?php while(has_sub_field('carmenere_data_sheet')): ?>
 										<li>
-											<a href="<?php the_sub_field('carmenere_file'); ?>"><?php the_sub_field('carmenere_file_title'); ?></a>
+											<a href="<?php the_sub_field('carmenere_file'); ?>"><?php the_sub_field('carmenere_file_year'); ?></a>
 										</li>
 									<?php endwhile; ?>
 								</ul>
@@ -186,7 +186,7 @@ Template Name: Wines
 								<ul class="list-inline">
 									<?php while(has_sub_field('cabernet_data_sheet')): ?>
 										<li>
-											<a href="<?php the_sub_field('cabernet_file'); ?>"><?php the_sub_field('cabernet_file_title'); ?></a>
+											<a href="<?php the_sub_field('cabernet_file'); ?>"><?php the_sub_field('cabernet_file_year'); ?></a>
 										</li>
 									<?php endwhile; ?>
 								</ul>
@@ -222,7 +222,7 @@ Template Name: Wines
 								<ul class="list-inline">
 									<?php while(has_sub_field('syrah_data_sheet')): ?>
 										<li>
-											<a href="<?php the_sub_field('syrah_file'); ?>"><?php the_sub_field('syrah_file_title'); ?></a>
+											<a href="<?php the_sub_field('syrah_file'); ?>"><?php the_sub_field('syrah_file_year'); ?></a>
 										</li>
 									<?php endwhile; ?>
 								</ul>

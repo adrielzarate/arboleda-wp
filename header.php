@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="first-time">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,6 +7,9 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
+  <!--[if lte IE9]>
+  <link rel="stylesheet" type="text/css" href="css/ie9.css">
+  <![endif]-->
 </head>
 <body <?php body_class(); ?> >
 
@@ -23,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="pull-left mobile mobile-home" href="index.php"><img src="<?php bloginfo('template_url'); ?>/img/arboleda-logo-mobile.jpg" alt="Arboleda"></a>
+          <a class="pull-left mobile mobile-home" href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/arboleda-logo-mobile.jpg" alt="Arboleda"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
@@ -40,14 +43,6 @@
           <div>
             <?php if (function_exists('qts_language_menu') ) qts_language_menu('text'); ?>
           </div>
-
-          <?php
-            // wp_nav_menu( array(
-            //   'theme_location' => 'lang-menu',
-            //   'container' => 'ul',
-            //   'menu_class'=> 'nav navbar-nav languages',
-            // ));
-          ?>
 
         </div>
       </div>
