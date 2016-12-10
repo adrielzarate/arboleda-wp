@@ -66,7 +66,7 @@
                 <!--:fr-->Joindre à la liste de diffusion préférée<!--:-->'); ?>
               </h2>
 
-<!--               <form>
+              <form method="post" action="http://adrielzarate.com.ar/en/?na=s">
                 <p>
                   <?php _e("
                     <!--:es-->Para seguir las Últimas Noticias de Arboleda, únete a nuestra lista de correo preferida.<!--:-->
@@ -75,34 +75,34 @@
                 </p>
                 <div class="form-group">
                   <label for="firstName">
-                  <?php _e('
-                    <!--:es-->Nombre<!--:-->
-                    <!--:en-->First Name<!--:-->
-                    <!--:fr-->Prénom<!--:-->'); ?>
+                    <?php _e('
+                      <!--:es-->Nombre<!--:-->
+                      <!--:en-->First Name<!--:-->
+                      <!--:fr-->Prénom<!--:-->'); ?>
                   </label>
-                  <input type="text" class="form-control" id="firstName">
+                  <input type="text" class="form-control" id="firstName" name="nn" required="">
                 </div>
                 <div class="form-group">
                   <label for="lastName">
-                  <?php _e('
-                    <!--:es-->Apellido<!--:-->
-                    <!--:en-->Last Name<!--:-->
-                    <!--:fr-->Le nom<!--:-->'); ?>
+                    <?php _e('
+                      <!--:es-->Apellido<!--:-->
+                      <!--:en-->Last Name<!--:-->
+                      <!--:fr-->Le nom<!--:-->'); ?>
                   </label>
-                  <input type="text" class="form-control" id="lastName">
+                  <input type="text" class="form-control" id="lastName" name="ns" required="">
                 </div>
                 <div class="form-group">
                   <label for="country">
-                  <?php _e('
-                    <!--:es-->País<!--:-->
-                    <!--:en-->Country<!--:-->
-                    <!--:fr-->Pays<!--:-->'); ?>
+                    <?php _e('
+                      <!--:es-->País<!--:-->
+                      <!--:en-->Country<!--:-->
+                      <!--:fr-->Pays<!--:-->'); ?>
                   </label>
-                  <input type="text" class="form-control" id="country">
+                  <input type="text" class="form-control" id="country" name="np1" required="">
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email">
+                  <input type="email" class="form-control" id="email" name="ne" required="">
                 </div>
                 <button type="submit" class="btn btn-default">
                   <?php _e('
@@ -110,24 +110,7 @@
                     <!--:en-->Submit<!--:-->
                     <!--:fr-->Soumettre<!--:-->'); ?>
                 </button>
-              </form> -->
-
-              <?php echo do_shortcode('[rainmaker_form id="205"]'); ?>
-
-              <div class="thanks">
-                <h2>
-                  <?php _e('
-                    <!--:es-->Gracias!<!--:-->
-                    <!--:en-->Thank You!<!--:-->
-                    <!--:fr-->Merci!<!--:-->'); ?>
-                </h2>
-                <em>
-                  <?php _e('
-                    <!--:es-->por unirse a nuestra lista de correo<!--:-->
-                    <!--:en-->for joining our mailing list<!--:-->
-                    <!--:fr-->de vous joindre à notre liste de diffusion<!--:-->'); ?>
-                </em>
-              </div>
+              </form>
             </div>
           </div>
         </div>

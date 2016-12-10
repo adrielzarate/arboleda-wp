@@ -1522,16 +1522,30 @@ footer .social-nets a:hover .contact-title{
 	right: -100px;
 }
 
-#mailingList .thanks {
-	color: #A7944E;
+#thanks .intro{
+	min-height: 0;
 }
 
-#mailingList .thanks h2 {
+#thanks h1 {
 	font-family: 'PT Serif', serif;
 	text-transform: none;
 	color: #A7944E;
 	margin-bottom: 0;
 }
+
+#thanks p {
+	color: #A7944E;
+}
+
+#thanks a:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 17px;
+    margin-right: 7px;
+    background-image: url(../img/left-arrow-gray.svg);
+    background-repeat: no-repeat;
+    margin-bottom: -4px;}
 
 .modal-backdrop {
 	display: none;
