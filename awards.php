@@ -27,7 +27,7 @@ Template Name: Awards
 
 			<div class="row wine-award">
 
-				<div class="col-md-3">
+				<div class="col-md-3 bottle-container">
 					<img class="bottle" src="<?php the_sub_field('awarded_wine_bottle'); ?>" alt="">
 				</div>
 
@@ -67,7 +67,6 @@ Template Name: Awards
 						</div>
 
 					<?php endif; ?>
-
 				</div>
 			</div>
 

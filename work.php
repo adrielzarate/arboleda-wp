@@ -89,10 +89,10 @@ Template Name: Work
 			</div>
 		</div>
 
-		<div id="winemaking" class="position-flag"></div>
-		<div class="row align-middle section" id="winemaking-content" data-aos="fade-up" data-aos-once="true">
+		<div id="viticulture" class="position-flag"></div>
+		<div class="row align-middle section" id="viticulture-content" data-aos="fade-up" data-aos-once="true">
 			<div class="col-md-7 col-lg-8">
-				<img src="<?php bloginfo('template_url'); ?>/img/work/winemaking.jpg" alt="Winemaking">
+				<img src="<?php bloginfo('template_url'); ?>/img/work/viticulture.jpg" alt="viticulture">
 			</div>
 			<div class="col-md-5 col-lg-4">
 				<h2><?php the_field('winemaking_tile'); ?></h2>

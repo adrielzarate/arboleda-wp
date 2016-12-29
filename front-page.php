@@ -1,20 +1,24 @@
 <?php get_header(); ?>
 
+<div id="trigger-start"></div>
+<div id="trigger-ending"></div>
+<button class="arrow arrow-down-white" id="startDown"></button>
+
 <div id="home-start">
-  <div class="spacer s2"></div>
-  <div id="trigger" class="spacer s0"></div>
   <div class="start" id="nube"></div>
-  <div class="start" id="montana"></div>
+  <!-- <div class="start" id="montana"></div> -->
   <div class="start" id="arbol"></div>
   <div class="start" id="parras"></div>
   <div class="start" id="hoja"></div>
-  <div class="spacer s2"></div>
+  <div class="start" id="tierra"></div>
+  <div class="start" id="ending"></div>
 </div>
 
 <article id="about">
 
   <!-- Intro -->
-  <div class="intro">
+  <div class="intro first-look">
+    <div class="black-wall"></div>
     <div>
       <h1><?php the_title(); ?></h1>
       <p>- <?php the_field('intro_subtitle'); ?> -</p>

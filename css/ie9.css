@@ -1,0 +1,25 @@
+button.arrow {
+	height: 30px;
+}
+
+.intro {
+	padding-top: 18%;
+}
+
+.main-nav {
+	padding-right: 0;
+}
+
+.main-nav > li {
+	width: 12%;
+}
+
+.main-nav > li > a {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.submenu {
+	filter: none;
+	background-color: #ececed;
+}

@@ -588,11 +588,28 @@ hr {
 }
 
 .isDesktop #tierra {
-	background-image: url(../img/parallax/tierra.png);
+	background-image: url(../img/parallax/tierra-blur.png);
 }
 
 .isDesktop #hoja {
-	background-image: url(../img/parallax/hoja.png);
+	background-image: url(../img/parallax/hoja-blur.png);
+}
+
+.isDesktop #ending {
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+}
+
+.isDesktop #startDown {
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 100;
 }
 
 /**
@@ -603,6 +620,21 @@ hr {
 
 #about .intro {
 	background-image: url(../img/about/intro-bg.jpg);
+}
+
+#about .first-look {
+	position: relative;
+}
+
+#about .first-look .black-wall {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
 }
 
 #about figure .hover-show {
@@ -850,7 +882,7 @@ hr {
 	background-image: url(../img/work/nature-7-bn.jpg);
 }
 
-#winemaking {
+#viticulture {
 	margin-top: 0;
 }
 
@@ -966,6 +998,10 @@ hr {
 	margin-bottom: 100px;
 }
 
+#awards .wine-award .bottle-container {
+	display: flex;
+}
+
 #awards .intro {
 	background-image: url(../img/awards/intro-bg.jpg);
 }
@@ -982,7 +1018,7 @@ hr {
 }
 
 #awards .bottle {
-	width: 150px;
+	width: 130px;
 	margin:auto;
 	display:block;
 }
@@ -1009,8 +1045,8 @@ hr {
 
 .awards-container {
 	overflow: hidden;
-	margin-top: 70px;
-	margin-bottom: 50px;
+	margin-top: 20px;
+	margin-bottom: 30px;
 	width: 90%;
 }
 
@@ -1465,7 +1501,7 @@ footer .social-nets a:hover .contact-title{
 #mailingList.modal {
 	top: 70px;
 	width: 100%;
-	height: calc(100% - 110px);
+	/* height: calc(100% - 110px); */
 	background-color: #fff;
 }
 
@@ -1569,7 +1605,8 @@ footer .social-nets a:hover .contact-title{
 	background-position: center center;
 }
 
-.isMobile #home-start .start {
+.isMobile #home-start .start,
+.isMobile #startDown {
 	display: none;
 }
 
@@ -1815,6 +1852,10 @@ footer .social-nets a:hover .contact-title{
 		margin: 10px 0;
 		border-left: none;
 		padding-left: 0;
+	}
+
+	#awards .wine-award .bottle-container {
+		display: block;
 	}
 
 	/**

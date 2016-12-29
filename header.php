@@ -7,8 +7,9 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
-  <!--[if lte IE9]>
-  <link rel="stylesheet" type="text/css" href="css/ie9.css">
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/vendors/swiper/css/idangerous.swiper.2.6.7.css">
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/ie9.css" />
   <![endif]-->
 </head>
 <body <?php body_class(); ?> >

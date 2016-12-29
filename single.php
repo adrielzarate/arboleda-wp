@@ -91,8 +91,8 @@ get_header(); ?>
 							<?php while(has_sub_field('related_links')): ?>
 
 								<li>
-									<a href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?></a>
-									<p><time><?php the_sub_field('link_date'); ?></time></p>
+									<p><a href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?></a></p>
+									<!-- <p><time><?php the_sub_field('link_date'); ?></time></p> -->
 								</li>
 
 							<?php endwhile; ?>
