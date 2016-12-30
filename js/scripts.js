@@ -5,6 +5,8 @@ var windoScrollUp;
 var windoScrollDown;
 var inHome;
 var awardsSlidesNmbr;
+var scene1;
+var scene2;
 var scrollmagicHeight;
 var nubeInit;
 var nubeEnd;
@@ -115,8 +117,8 @@ function scrollTo(dest, fromNav) {
 	}
 
 	if(fromNav == 'firstLook') {
-		$('html, body').animate({ scrollTop: scrollDistance }, 3000, function() {
-			flag = true;
+		$('html, body').animate({ scrollTop: scrollDistance }, 2000, function() {
+			introAnimationFlag = true;
 		});
 		return;
 	}
@@ -134,6 +136,24 @@ $.fn.scrollEnd = function(callback, timeout) {
     $this.data('scrollTimeout', setTimeout(callback,timeout));
   });
 };
+
+function killParallax() {
+	scene1.destroy();
+	scene2.destroy();
+	scene1 = null;
+	scene2 = null;
+	controller = null;
+	tween = null;
+
+
+	setTimeout(function(){
+		$('.black-wall').fadeOut(250, function() { $(this).remove(); });
+		$('.intro-parallax').remove();
+		window.scroll(0, 0);
+		AOS.init();
+		introAnimationFlag = false;
+	}, 500);
+}
 
 function init() {
 
@@ -188,10 +208,10 @@ function init() {
 		arbolEnd = windowHeight * (-.6);
 		parrasInit = windowHeight * .3;
 		parrasEnd = windowHeight * (-1);
-		hojaInit = windowHeight * 1.5;
-		hojaEnd = windowHeight * (-1.1);
+		hojaInit = windowHeight * 1.2;
+		hojaEnd = windowHeight * (-.6);
 		tierraInit = windowHeight * 3;
-		tierraEnd = windowHeight * (-.5);
+		tierraEnd = windowHeight * (-.1);
 
 		var controller = new ScrollMagic.Controller();
 
@@ -221,7 +241,7 @@ function init() {
 
 		]);
 
-		var scene1 = new ScrollMagic.Scene({
+		scene1 = new ScrollMagic.Scene({
 			triggerElement: "#trigger-start",
 			triggerHook: "onLeave",
 			duration: '600%',
@@ -240,18 +260,16 @@ function init() {
 				{opacity: 1 }),
 		]);
 
-		var scene2 = new ScrollMagic.Scene({
+		scene2 = new ScrollMagic.Scene({
 			triggerElement: "#trigger-ending",
 			triggerHook: "onLeave",
-			duration: '75%',
-			offset: (windowHeight * 4.4) })
+			duration: '80%',
+			offset: (windowHeight * 5.5) })
 		.setTween(endingTween)
 		// .addIndicators({name: "2"})
 		.addTo(controller)
 		.on("end", function (event) {
-			setTimeout(function(){
-				$('.black-wall').fadeOut(500, function() { $(this).remove(); });
-			}, 1000);
+			killParallax();
 		});
 	}
 
@@ -280,7 +298,9 @@ $(window).resize(function() {
 
 // events at scroll
 var lastScrollTop = 0;
-scrollmagicHeight = $('#about').offset().top;
+if( inHome ) {
+	scrollmagicHeight = $('#about').offset().top;
+}
 
 $(window).scroll( function() {
 
@@ -316,14 +336,20 @@ $(window).scroll( function() {
 	}
 	lastScrollTop = windoScrollTop;
 
+    if ( windoScrollTop > 50 ){
+    	$('#startDown').removeClass('visible');
+    } else {
+    	$('#startDown').addClass('visible');
+    }
+
 });
 
-var flag = true;
+var introAnimationFlag = true;
 
 $(window).scrollEnd(function(){
-    if( windoScrollDown && inHome && flag && windoScrollTop < scrollmagicHeight ){
+    if( windoScrollDown && inHome && introAnimationFlag && windoScrollTop < windowHeight ){
     	scrollTo( '#about', 'firstLook' );
-    	flag = false;
+    	introAnimationFlag = false;
     }
 }, 100);
 
@@ -363,7 +389,7 @@ $("#down").click( function(){scrollTo( '.intro + div', false )} );
 
 $("#startDown").click( function(){
 	scrollTo( '#about', 'firstLook' );
-	flag = false;
+	introAnimationFlag = false;
 } );
 
 /**

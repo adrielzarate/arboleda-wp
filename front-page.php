@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 
-<div id="trigger-start"></div>
-<div id="trigger-ending"></div>
-<button class="arrow arrow-down-white" id="startDown"></button>
+<div class="intro-parallax">
+  <div id="trigger-start"></div>
+  <div id="trigger-ending"></div>
+  <button class="arrow arrow-down-white visible" id="startDown"><span>Discover us</span></button>
 
-<div id="home-start">
-  <div class="start" id="nube"></div>
-  <!-- <div class="start" id="montana"></div> -->
-  <div class="start" id="arbol"></div>
-  <div class="start" id="parras"></div>
-  <div class="start" id="hoja"></div>
-  <div class="start" id="tierra"></div>
-  <div class="start" id="ending"></div>
+  <div id="home-start">
+    <div class="start" id="nube"></div>
+    <!-- <div class="start" id="montana"></div> -->
+    <div class="start" id="arbol"></div>
+    <div class="start" id="parras"></div>
+    <div class="start" id="hoja"></div>
+    <div class="start" id="tierra"></div>
+    <div class="start" id="ending"></div>
+  </div>
 </div>
 
 <article id="about">

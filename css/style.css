@@ -572,7 +572,7 @@ hr {
 }
 
 .isDesktop #nube {
-	background-image: url(../img/parallax/nube1.png);
+	background-image: url(../img/parallax/nube.jpg);
 }
 
 .isDesktop #montana {
@@ -588,11 +588,11 @@ hr {
 }
 
 .isDesktop #tierra {
-	background-image: url(../img/parallax/tierra-blur.png);
+	background-image: url(../img/parallax/tierra.png);
 }
 
 .isDesktop #hoja {
-	background-image: url(../img/parallax/hoja-blur.png);
+	background-image: url(../img/parallax/hoja.png);
 }
 
 .isDesktop #ending {
@@ -602,6 +602,8 @@ hr {
 }
 
 .isDesktop #startDown {
+	opacity: 0;
+	transition: .1s ease;
 	display: block;
 	position: absolute;
 	width: 40px;
@@ -610,6 +612,25 @@ hr {
     left: 50%;
     margin-left: -20px;
     z-index: 100;
+}
+
+.isDesktop #startDown.visible {
+	opacity: 1;
+}
+
+.isDesktop #startDown span {
+	color: #fff;
+	text-transform: uppercase;
+	width: 100px;
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    margin-left: -50px;
+    text-shadow: 0 0 2px #000;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Cinzel', serif;
 }
 
 /**
