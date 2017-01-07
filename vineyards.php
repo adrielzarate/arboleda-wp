@@ -48,7 +48,7 @@ Template Name: Vineyards
 		<div id="chilhue-vineyard" class="position-flag"></div>
 		<div class="row">
 			<div class="col-sm-12" data-aos="fade-up" data-aos-once="true">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/aconcagua-valley-map-big.jpg" alt="Aconcagua Valley map">
+				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/colihue-map.jpg" alt="Aconcagua Valley map">
 			</div>
 		</div>
 		<div class="row align-middle section" id="chilhue-vineyard-content" data-aos="fade-up" data-aos-once="true">
@@ -98,7 +98,7 @@ Template Name: Vineyards
 			<div class="col-md-4" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/climate.jpg" alt="">
+						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/climate-colihue.jpg" alt="">
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-12">
 						<h3><?php the_field('chilhue_climate_title'); ?></h3>
@@ -113,7 +113,7 @@ Template Name: Vineyards
 						<p><?php the_field('chilhue_soils_content'); ?></p>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/soils.jpg" alt="">
+						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/suelo-colihue.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -129,11 +129,11 @@ Template Name: Vineyards
 					<ul class="list-unstyled click-list radio-lots">
 						<li>
 							<input id="chardonay" type="radio" name="lots-aconcagua" value="chardonay" checked>
-							<label class="italic-highlighted" for="chardonay">Chardonay</label>
+							<label class="italic-highlighted" for="chardonay">Chardonnay</label>
 						</li>
 						<li>
 							<input id="sauvignon-blanc" type="radio" name="lots-aconcagua" value="sauvignon-blanc">
-							<label class="italic-highlighted" for="sauvignon-blanc">sauvignon Blanc</label>
+							<label class="italic-highlighted" for="sauvignon-blanc">Sauvignon Blanc</label>
 						</li>
 						<li>
 							<input id="pinot-noir" type="radio" name="lots-aconcagua" value="pinot-noir">
@@ -192,7 +192,7 @@ Template Name: Vineyards
 		<div id="las-vertientes" class="position-flag"></div>
 		<div class="row">
 			<div class="col-sm-12" data-aos="fade-up" data-aos-once="true">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/aconcagua-valley-map-big.jpg" alt="Aconcagua Valley map">
+				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/las-vertientes-map.jpg" alt="Aconcagua Valley map">
 			</div>
 		</div>
 		<div class="row align-middle section" id="chilhue-vineyard-content" data-aos="fade-up" data-aos-once="true">

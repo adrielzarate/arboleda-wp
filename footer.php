@@ -19,7 +19,7 @@
       <div class="col-md-4 mailing-list text-center">
         <a id="join" href="#" data-toggle="modal" data-target="#mailingList">
           <?php _e('
-            <!--:es-->Unase a nuestra lista de correo<!--:-->
+            <!--:es-->Suscribirte a nuestro Newsletter<!--:-->
             <!--:en-->Join Preferred Mailing List<!--:-->
             <!--:fr-->Adhérer à la liste de diffusion préférée<!--:-->'); ?>
         </a>
@@ -70,7 +70,7 @@
                 <p>
                   <?php _e("
                     <!--:es-->Para seguir las Últimas Noticias de Arboleda, únete a nuestra lista de correo preferida.<!--:-->
-                    <!--:en-->To follow the Latest News from Arboleda, join our preferred mailing list.<!--:-->
+                    <!--:en-->To follow the Latest News from Arboleda, join us.<!--:-->
                     <!--:fr-->Pour suivre les Dernières Nouvelles d'Arboleda, rejoignez notre liste de diffusion préférée.<!--:-->"); ?>
                 </p>
                 <div class="form-group">

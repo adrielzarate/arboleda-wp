@@ -25,7 +25,7 @@ Template Name: Awards
 
 			<div id="<?php the_sub_field('awarded_wine_select'); ?>" class="position-flag"></div>
 
-			<div class="row wine-award">
+			<div class="row row-wine wine-award">
 
 				<div class="col-md-3 bottle-container">
 					<img class="bottle" src="<?php the_sub_field('awarded_wine_bottle'); ?>" alt="">
