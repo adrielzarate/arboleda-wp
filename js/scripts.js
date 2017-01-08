@@ -20,6 +20,7 @@ var tierraInit;
 var tierraEnd;
 var endingInit;
 var endingEnd;
+var aboutHeight;
 var scrollDistance;
 var selectedCheckbox;
 
@@ -31,6 +32,7 @@ var selectedCheckbox;
 
 // if element is visible on screen
 function detectVisibility() {
+
 	if ( $('#philosophy').visible() ) {
 		$(".submenu a").removeClass('active');
 		$(".philosophy-lnk a").addClass('active');
@@ -98,6 +100,7 @@ function detectVisibility() {
 
 // get max height value
 var getMaxHeightEl = function (element) {
+
 	var heights = $(element).map( function () {
 		return $(this).height();
 	}).get();
@@ -117,9 +120,8 @@ function scrollTo(dest, fromNav) {
 	}
 
 	if(fromNav == 'firstLook') {
-		$('html, body').animate({ scrollTop: scrollDistance }, 2000, function() {
-			introAnimationFlag = true;
-		});
+		clickFromIntro = true;
+		$('html, body').animate({ scrollTop: scrollDistance }, 2000 );
 		return;
 	}
 
@@ -128,6 +130,7 @@ function scrollTo(dest, fromNav) {
 
 // detect when user stops scrolling
 $.fn.scrollEnd = function(callback, timeout) {
+
   $(this).scroll(function(){
     var $this = $(this);
     if ($this.data('scrollTimeout')) {
@@ -138,20 +141,38 @@ $.fn.scrollEnd = function(callback, timeout) {
 };
 
 function killParallax() {
+
 	scene1.destroy();
 	scene2.destroy();
 	scene1 = null;
 	scene2 = null;
 	controller = null;
 	tween = null;
+	introAnimationFlag = false;
 
-	setTimeout(function(){
-		$('.black-wall').fadeOut(250, function() { $(this).remove(); });
+	if(clickFromIntro) {
+		// else if im scrolling from the same intro page
+		$(window).bind('scroll');
+		setTimeout(function(){
+			$('.intro-parallax').remove();
+			window.scroll(0, 0);
+			$('.black-wall').fadeOut(250, function() {
+				$(this).remove();
+			});
+			AOS.init();
+		}, 500);
+	} else {
+		// else if i am coming from other different to intro page
+		var goingTo = windoScrollTop - scrollmagicHeight + 70;
 		$('.intro-parallax').remove();
-		window.scroll(0, 0);
-		AOS.init();
-		introAnimationFlag = false;
-	}, 500);
+		window.scroll(0, goingTo );
+		setTimeout(function(){
+			$('.black-wall').fadeOut(250, function() {
+				$(this).remove();
+			});
+			AOS.init();
+		}, 800);
+	}
 }
 
 function init() {
@@ -160,6 +181,8 @@ function init() {
 	windowWidth = $(window).width();
 	$('.intro').height(windowHeight);
 	$('#home-start').height(windowHeight);
+	windoScrollTop = $(window).scrollTop();
+	aboutHeight = $('#about').height();
 
 	inHome = $( "body" ).hasClass( "home" ) ? true : false;
 
@@ -340,23 +363,24 @@ $(window).scroll( function() {
     } else {
     	$('#intro-title').addClass('visible');
     }
-
 });
 
 var introAnimationFlag = true;
+var clickFromIntro = false;
 
 $(window).scrollEnd(function(){
-    if( windoScrollDown && inHome && introAnimationFlag && windoScrollTop < windowHeight && !isMobile ){
+    // if( windoScrollDown && inHome && introAnimationFlag && windoScrollTop < windowHeight && !isMobile ) {
+    if( windoScrollDown && inHome && introAnimationFlag && !isMobile ) {
     	scrollTo( '#about', 'firstLook' );
-    	introAnimationFlag = false;
+    	$(window).unbind('scroll');
     }
 }, 100);
 
 // scrollTo triggers
 //ABOUT
-$(".philosophy-lnk a").click( function(){scrollTo('#philosophy', true );});
-$(".founder-lnk a").click( function(){scrollTo( '#founder', true )});
-$(".team-lnk a").click( function(){scrollTo( '#team', true )});
+$(".philosophy-lnk a").click( function(){scrollTo('#philosophy', true )} );
+$(".founder-lnk a").click( function(){scrollTo( '#founder', true )} );
+$(".team-lnk a").click( function(){scrollTo( '#team', true )} );
 
 //VINEYARDS
 $(".aconcagua-valley-lnk a").click( function(){scrollTo( '#aconcagua-valley', true )} );
@@ -388,7 +412,6 @@ $("#down").click( function(){scrollTo( '.intro + div', false )} );
 
 $("#startDown").click( function(){
 	scrollTo( '#about', 'firstLook' );
-	introAnimationFlag = false;
 } );
 
 /**

@@ -19,11 +19,11 @@
   </div>
 </div>
 
-<article id="about">
 
+<article id="about">
+  <div class="black-wall"></div>
   <!-- Intro -->
   <div class="intro first-look">
-    <div class="black-wall"></div>
     <div>
       <h1><?php the_title(); ?></h1>
       <p>- <?php the_field('intro_subtitle'); ?> -</p>

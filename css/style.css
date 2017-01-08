@@ -604,6 +604,10 @@ hr {
 *
 */
 
+#about {
+	position: relative;
+}
+
 #about .intro {
 	background-image: url(../img/about/intro-bg.jpg);
 }
@@ -612,11 +616,13 @@ hr {
 	position: relative;
 }
 
-#about .first-look .black-wall {
-	display: none;
+/* #about .first-look .black-wall { */
+#about .black-wall {
+	/* display: none; */
 }
 
-.isDesktop #about .first-look .black-wall {
+/* .isDesktop #about .first-look .black-wall { */
+.isDesktop #about .black-wall {
 	display: block;
 	position: absolute;
 	z-index: 1;
