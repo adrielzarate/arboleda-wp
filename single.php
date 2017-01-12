@@ -64,18 +64,17 @@ get_header(); ?>
 				<ul class="post-end-links list-unstyled">
 					<?php if(get_field('post_newsletter_url')): ?>
 						<li>
-							<a class="arrow arrow-up-gray" href="<?php the_field('post_newsletter_url'); ?>">Newsletter</a>
+							<a class="arrow arrow-up-gray" href="<?php the_field('post_newsletter_url'); ?>" target="_blank">Newsletter</a>
 						</li>
 					<?php endif; ?>
 					<li>
-						<a class="arrow arrow-left-gray" href="<?php _e('<!--:es-->/noticias/<!--:--><!--:en-->/news/?lang=en<!--:--><!--:fr-->/nouvelles/?lang=fr<!--:-->'); ?>">
+						<a class="arrow arrow-left-gray" href="<?php _e('<!--:es-->/noticias/<!--:--><!--:en-->/news/?lang=en<!--:--><!--:fr-->/nouvelles/?lang=fr<!--:-->'); ?>/#all">
 							<?php _e('
 								<!--:es-->Volver a Noticias<!--:-->
 								<!--:en-->Back to News<!--:-->
 								<!--:fr-->Retour aux Nouvelles<!--:-->'); ?>
 						</a>
 					</li>
-
 				</ul>
 
 			</div>

@@ -13,15 +13,22 @@
     <div class="container align-middle">
 
       <div class="col-md-4">
-        <a href="http://www.arboledawines.com/agents.asp">Intranet</a>
+        <a href="http://www.arboledawines.com/agents.asp">
+          <?php _e('
+            <!--:es-->Agentes<!--:-->
+            <!--:en-->Agents<!--:-->
+            <!--:fr-->Agents<!--:-->');
+          ?>
+        </a>
       </div>
 
       <div class="col-md-4 mailing-list text-center">
         <a id="join" href="#" data-toggle="modal" data-target="#mailingList">
           <?php _e('
-            <!--:es-->Suscribirte a nuestro Newsletter<!--:-->
+            <!--:es-->Suscríbete a nuestro Newsletter<!--:-->
             <!--:en-->Join Preferred Mailing List<!--:-->
-            <!--:fr-->Adhérer à la liste de diffusion préférée<!--:-->'); ?>
+            <!--:fr-->Adhérer à la liste de diffusion préférée<!--:-->');
+          ?>
         </a>
       </div>
 
@@ -37,9 +44,6 @@
                 </span>
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
               </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/VinsArboleda/?fref=ts" target="_blank" title="Facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
             </li>
             <li>
               <a href="https://www.instagram.com/arboledawines/" target="_blank" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -69,9 +73,9 @@
               <form method="post" action="http://adrielzarate.com.ar/en/?na=s">
                 <p>
                   <?php _e("
-                    <!--:es-->Para seguir las Últimas Noticias de Arboleda, únete a nuestra lista de correo preferida.<!--:-->
-                    <!--:en-->To follow the Latest News from Arboleda, join us.<!--:-->
-                    <!--:fr-->Pour suivre les Dernières Nouvelles d'Arboleda, rejoignez notre liste de diffusion préférée.<!--:-->"); ?>
+                    <!--:es-->Para seguir las Últimas Noticias de Arboleda<!--:-->
+                    <!--:en-->to follow the Latest News from Arboleda<!--:-->
+                    <!--:fr-->Pour suivre les Dernières Nouvelles d'Arboleda<!--:-->"); ?>
                 </p>
                 <div class="form-group">
                   <label for="firstName">

@@ -12,7 +12,7 @@ Template Name: thanks
 		<div>
 			<h1><?php the_title(); ?></h1>
 			<p><em><?php the_field('intro_subtitle'); ?></em></p>
-			<p><a href="<?php echo get_home_url(); ?>"><?php the_field('return_message'); ?></a></p>
+			<a href="<?php echo get_home_url(); ?>"><?php the_field('return_message'); ?></a>
 		</div>
 	</div>
 </article>

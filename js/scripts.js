@@ -163,7 +163,10 @@ function killParallax() {
 		}, 500);
 	} else {
 		// else if i am coming from other different to intro page
-		var goingTo = windoScrollTop - scrollmagicHeight + 70;
+		var goingTo = windoScrollTop - scrollmagicHeight;
+		if( goingTo > windowHeight ) {
+			goingTo += 70;
+		}
 		$('.intro-parallax').remove();
 		window.scroll(0, goingTo );
 		setTimeout(function(){

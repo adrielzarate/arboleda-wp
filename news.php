@@ -18,7 +18,7 @@ Template Name: News
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="all">
 
 		<div class="row">
 

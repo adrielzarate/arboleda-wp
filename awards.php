@@ -35,7 +35,11 @@ Template Name: Awards
 
 					<h2 class="text-center"><?php the_sub_field('awarded_wine_name'); ?></h2>
 					<h3 class="text-center"><?php the_sub_field('awarded_wine_place'); ?></h3>
-					<a class="arrow arrow-down-gray download-pdf text-center" href="<?php the_sub_field('awarded_wine_year_pdf'); ?>">See All (PDF)</a>
+					<a class="arrow arrow-down-gray download-pdf text-center" href="<?php the_sub_field('awarded_wine_year_pdf'); ?>" target="_blank"> <?php _e('
+			            <!--:es-->Ver Todos<!--:-->
+			            <!--:en-->See All<!--:-->
+			            <!--:fr-->Voir Tous<!--:-->');
+				        ?> (PDF)</a>
 
 					<?php if( have_rows('awarded_wine_year_gallery') ): ?>
 						<div class="years-awards-container">

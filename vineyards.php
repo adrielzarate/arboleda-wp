@@ -91,7 +91,7 @@ Template Name: Vineyards
 						<p><?php the_field('chilhue_property_content'); ?></p>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/property.jpg" alt="">
+						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/chilhue-property.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -139,17 +139,15 @@ Template Name: Vineyards
 							<input id="pinot-noir" type="radio" name="lots-aconcagua" value="pinot-noir">
 							<label class="italic-highlighted" for="pinot-noir">Pinot Noir</label>
 						</li>
-						<li>
-							<input id="all-aconcacua-costa-lots" type="radio" name="lots-aconcagua" value="all-aconcacua-costa-lots">
-							<label class="italic-highlighted" for="all-aconcacua-costa-lots"><?php the_field('all_lots_btn'); ?></label>
-						</li>
 					</ul>
 				</div>
 
 				<ul class="list-unstyled lots-maps list-inline">
 					<li class="row chardonay active">
 						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-chardonay.jpg" alt="">
+							<?php if( get_field('lots_chardonay_map') ): ?>
+								<img class="img-responsive" src="<?php the_field('lots_chardonay_map'); ?>" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="col-md-4 col-lg-3 quote">
 							<h3>Chardonay</h3>
@@ -158,7 +156,9 @@ Template Name: Vineyards
 					</li>
 					<li class="row sauvignon-blanc">
 						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-x-.jpg" alt="">
+							<?php if( get_field('lots_sauvignon_blanc_map') ): ?>
+								<img class="img-responsive" src="<?php the_field('lots_sauvignon_blanc_map'); ?>" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="col-md-4 col-lg-3 quote">
 							<h3>sauvignon Blanc</h3>
@@ -167,20 +167,13 @@ Template Name: Vineyards
 					</li>
 					<li class="row pinot-noir">
 						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-x.jpg" alt="">
+							<?php if( get_field('lots_pinot_noir_map') ): ?>
+								<img class="img-responsive" src="<?php the_field('lots_pinot_noir_map'); ?>" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="col-md-4 col-lg-3 quote">
 							<h3>Pinot Noir</h3>
 							<p><?php the_field('lots_pinot_noir_content'); ?></p>
-						</div>
-					</li>
-					<li class="row all-aconcacua-costa-lots">
-						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-chardonay.jpg" alt="">
-						</div>
-						<div class="col-md-4 col-lg-3 quote">
-							<h3>Todos los lotes</h3>
-							<p><?php the_field('all_aconcagua_costa_lots_content'); ?></p>
 						</div>
 					</li>
 				</ul>
@@ -237,14 +230,14 @@ Template Name: Vineyards
 						<p><?php the_field('vertientes_property_content'); ?></p>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/property.jpg" alt="">
+						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/vertientes-property.jpg" alt="">
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/climate.jpg" alt="">
+						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/climate-vertientes.jpg" alt="">
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-12">
 						<h3><?php the_field('vertientes_climate_title'); ?></h3>
@@ -285,17 +278,15 @@ Template Name: Vineyards
 							<input id="syrah" type="radio" name="lots-vertientes" value="syrah">
 							<label class="italic-highlighted" for="syrah">Syrah</label>
 						</li>
-						<li>
-							<input id="all-vertientes-lots" type="radio" name="lots-vertientes" value="all-vertientes-lots">
-							<label class="italic-highlighted" for="all-vertientes-lots"><?php the_field('all_lots_btn'); ?></label>
-						</li>
 					</ul>
 				</div>
 
 				<ul class="list-unstyled lots-maps list-inline">
 					<li class="row carmenere active">
 						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-chardonay.jpg" alt="">
+							<?php if( get_field('lots_carmenere_map') ): ?>
+								<img class="img-responsive" src="<?php the_field('lots_carmenere_map'); ?>" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="col-md-4 col-lg-3 quote">
 							<h3>Carmenere</h3>
@@ -304,7 +295,9 @@ Template Name: Vineyards
 					</li>
 					<li class="row cabernet-sauvignon">
 						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-x-.jpg" alt="">
+							<?php if( get_field('lots_cabernet_map') ): ?>
+								<img class="img-responsive" src="<?php the_field('lots_cabernet_map'); ?>" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="col-md-4 col-lg-3 quote">
 							<h3>Cabernet Sauvignon</h3>
@@ -313,20 +306,13 @@ Template Name: Vineyards
 					</li>
 					<li class="row syrah">
 						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-x.jpg" alt="">
+							<?php if( get_field('lots_syrah_map') ): ?>
+								<img class="img-responsive" src="<?php the_field('lots_syrah_map'); ?>" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="col-md-4 col-lg-3 quote">
 							<h3>Syrah</h3>
 							<p><?php the_field('lots_syrah_content'); ?></p>
-						</div>
-					</li>
-					<li class="row all-vertientes-lots">
-						<div class="col-md-12">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/vineyards/lots-chardonay.jpg" alt="">
-						</div>
-						<div class="col-md-4 col-lg-3 quote">
-							<h3>Todos los lotes</h3>
-							<p><?php the_field('all_vertientes_lots_content'); ?></p>
 						</div>
 					</li>
 				</ul>
