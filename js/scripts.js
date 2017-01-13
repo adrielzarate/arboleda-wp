@@ -23,6 +23,8 @@ var endingEnd;
 var aboutHeight;
 var scrollDistance;
 var selectedCheckbox;
+// var url = 'http://www.arboledawines.com';
+var url = 'http://adrielzarate.com.ar';
 
 /**
 *
@@ -425,7 +427,7 @@ $("#startDown").click( function(){
 
 $(document).ready(function() {
 	$('#splash-page .qts-lang-menu li').removeClass('current-menu-item');
-	$('#splash-page .qts-lang-menu li:first-child a').attr("href", "http://adrielzarate.com.ar/");
+	$('#splash-page .qts-lang-menu li:first-child a').attr("href", url);
 	$('#splash-page .qts-lang-menu li:first-child a').attr("id", "wpsp-continue");
 	$('#splash-page .qts-lang-menu li:first-child').addClass('current-menu-item');
 	currentUrl = window.location.href;
@@ -436,10 +438,10 @@ $(document).ready(function() {
 
 $('#splash-page .qts-lang-menu li:first-child a').click(function(event) {
 	event.preventDefault();
-	if( currentUrl == 'http://adrielzarate.com.ar/es/' || currentUrl == 'http://adrielzarate.com.ar/es' || currentUrl == 'http://adrielzarate.com.ar/' || currentUrl == 'http://adrielzarate.com.ar' ) {
+	if( currentUrl == url + '/es/' || currentUrl == url + '/es' || currentUrl == url + '/' || currentUrl == url ) {
 		location.reload();
 	} else {
-		window.location.href = 'http://adrielzarate.com.ar/es/';
+		window.location.href = url + '/es/';
 	}
 });
 
