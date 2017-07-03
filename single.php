@@ -68,11 +68,12 @@ get_header(); ?>
 						</li>
 					<?php endif; ?>
 					<li>
-						<a class="arrow arrow-left-gray" href="<?php _e('<!--:es-->/noticias/<!--:--><!--:en-->/news/?lang=en<!--:--><!--:fr-->/nouvelles/?lang=fr<!--:-->'); ?>/#all">
+						<a class="arrow arrow-left-gray" href="<?php _e('<!--:es-->/noticias/<!--:--><!--:en-->/news/?lang=en<!--:--><!--:fr-->/actualite/?lang=fr<!--:--><!--:zh-->/最新消息/?lang=zh<!--:-->'); ?>/#all">
 							<?php _e('
 								<!--:es-->Volver a Noticias<!--:-->
 								<!--:en-->Back to News<!--:-->
-								<!--:fr-->Retour aux Nouvelles<!--:-->'); ?>
+								<!--:fr-->Retour aux Nouvelles<!--:-->
+								<!--:zh-->回到最新消息<!--:-->'); ?>
 						</a>
 					</li>
 				</ul>

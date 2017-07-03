@@ -5,6 +5,7 @@ var windoScrollUp;
 var windoScrollDown;
 var inHome;
 var isMobile;
+var delayScroll;
 var awardsSlidesNmbr;
 var scene1;
 var scene2;
@@ -14,17 +15,11 @@ var introTitleEnd;
 var arbolEnd;
 var parrasInit;
 var parrasEnd;
-var hojaInit;
-var hojaEnd;
-var tierraInit;
-var tierraEnd;
 var endingInit;
 var endingEnd;
-var aboutHeight;
+var homeHeight;
 var scrollDistance;
 var selectedCheckbox;
-// var url = 'http://www.arboledawines.com';
-var url = 'http://adrielzarate.com.ar';
 
 /**
 *
@@ -178,6 +173,11 @@ function killParallax() {
 			AOS.init();
 		}, 800);
 	}
+	// $('.main-nav .home a').css({
+	// 	backgroundImage: 'url(http://arboledawines.com/wp-content/themes/arboleda-wp-theme/img/arboleda-logo.jpg)',
+	// 	right: 0
+	// });
+	$( document ).trigger( "introAnimationEnd");
 }
 
 function init() {
@@ -187,7 +187,7 @@ function init() {
 	$('.intro').height(windowHeight);
 	$('#home-start').height(windowHeight);
 	windoScrollTop = $(window).scrollTop();
-	aboutHeight = $('#about').height();
+	// homeHeight = $('#home').height();
 
 	inHome = $( "body" ).hasClass( "home" ) ? true : false;
 
@@ -233,12 +233,8 @@ function init() {
 		introTitleEnd = windowHeight * (-.6);
 		arbolInit = windowHeight * (-.15);
 		arbolEnd = windowHeight * (-.6);
-		parrasInit = windowHeight * .3;
-		parrasEnd = windowHeight * (-1);
-		hojaInit = windowHeight * 1.2;
-		hojaEnd = windowHeight * (-.6);
-		tierraInit = windowHeight * 3;
-		tierraEnd = windowHeight * (-.1);
+		parrasInit = windowHeight * .4;
+		parrasEnd = windowHeight * (-.2);
 
 		var controller = new ScrollMagic.Controller();
 
@@ -257,14 +253,6 @@ function init() {
 			TweenMax.fromTo("#parras", 1,
 				{backgroundPosition: "0 " + parrasInit + "px" },
 				{backgroundPosition: "0 " + parrasEnd + "px"}),
-
-			TweenMax.fromTo("#hoja", 1,
-				{backgroundPosition: "0 " + hojaInit + "px" },
-				{backgroundPosition: "0 " + hojaEnd + "px"}),
-
-			TweenMax.fromTo("#tierra", 1,
-				{backgroundPosition: "0 " + tierraInit + "px" },
-				{backgroundPosition: "0 " + tierraEnd + "px"}),
 
 		]);
 
@@ -319,6 +307,15 @@ function init() {
 
 init();
 
+$(window).on("load", function() {
+	if( $( 'body' ).hasClass( 'isDesktop' ) && $( 'body' ).hasClass( 'home' ) ){
+		delayScroll = setInterval(function(){
+			scrollTo( '#home', 'firstLook' );
+			clearInterval(delayScroll);
+		}, 3000);
+	}
+});
+
 $(window).resize(function() {
 	init();
 });
@@ -326,11 +323,17 @@ $(window).resize(function() {
 // events at scroll
 var lastScrollTop = 0;
 if( inHome ) {
-	scrollmagicHeight = $('#about').offset().top;
+	try {
+		scrollmagicHeight = $('#home').offset().top;
+	}
+	catch(err) {
+    	console.log('there is not about section')
+	}
 }
 
 $(window).scroll( function() {
 
+	clearInterval(delayScroll);
 	detectVisibility();
 	windoScrollTop = $(this).scrollTop();
 
@@ -376,7 +379,7 @@ var clickFromIntro = false;
 $(window).scrollEnd(function(){
     // if( windoScrollDown && inHome && introAnimationFlag && windoScrollTop < windowHeight && !isMobile ) {
     if( windoScrollDown && inHome && introAnimationFlag && !isMobile ) {
-    	scrollTo( '#about', 'firstLook' );
+    	scrollTo( '#home', 'firstLook' );
     	$(window).unbind('scroll');
     }
 }, 100);
@@ -391,6 +394,9 @@ $(".team-lnk a").click( function(){scrollTo( '#team', true )} );
 $(".aconcagua-valley-lnk a").click( function(){scrollTo( '#aconcagua-valley', true )} );
 $(".chilhue-vineyard-lnk a").click( function(){scrollTo( '#chilhue-vineyard', true )} );
 $(".las-vertientes-lnk a").click( function(){scrollTo( '#las-vertientes', true )} );
+
+$("#chilhue-map").click( function(){scrollTo( '#chilhue-content', false )} );
+$("#las-vertientes-map").click( function(){scrollTo( '#las-vertientes-content', false )} );
 
 //WORK
 $(".sustainability-lnk a").click( function(){scrollTo( '#sustainability', true )} );
@@ -416,34 +422,8 @@ $("#top").click( function(){scrollTo( 'body', false )} );
 $("#down").click( function(){scrollTo( '.intro + div', false )} );
 
 $("#startDown").click( function(){
-	scrollTo( '#about', 'firstLook' );
+	scrollTo( '#home', 'firstLook' );
 } );
-
-/**
-*
-* splash page scripts
-*
-*/
-
-$(document).ready(function() {
-	$('#splash-page .qts-lang-menu li').removeClass('current-menu-item');
-	$('#splash-page .qts-lang-menu li:first-child a').attr("href", url);
-	$('#splash-page .qts-lang-menu li:first-child a').attr("id", "wpsp-continue");
-	$('#splash-page .qts-lang-menu li:first-child').addClass('current-menu-item');
-	currentUrl = window.location.href;
-	if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
-		console.log('ie');
-	}
-});
-
-$('#splash-page .qts-lang-menu li:first-child a').click(function(event) {
-	event.preventDefault();
-	if( currentUrl == url + '/es/' || currentUrl == url + '/es' || currentUrl == url + '/' || currentUrl == url ) {
-		location.reload();
-	} else {
-		window.location.href = url + '/es/';
-	}
-});
 
 /**
 *
@@ -458,6 +438,8 @@ $('.radio-lots input').on('change', function() {
 	$(this).parents().eq(2).next('.lots-maps').find('li.' + selectedCheckbox).addClass('active');
 });
 
+$('.tour-virtual').height( windowHeight - 40 );
+
 /**
 *
 * awards page scripts
@@ -470,7 +452,13 @@ $(".awards-container").each(function(){
 		prevButton: $this.siblings('.next-prev-menu').find(".swiper-button-prev"),
 		slidesPerView: awardsSlidesNmbr,
 		paginationClickable: true,
-		spaceBetween: 30
+		spaceBetween: 30,
+		slidesPerGroup: 2,
+		breakpoints: {
+		    480: {
+				slidesPerGroup: 1
+		    }
+	    }
 	});
 });
 
@@ -502,6 +490,7 @@ var swiper = new Swiper('.swiper-container', {
 	pagination: '.swiper-pagination',
 	paginationClickable: true,
 	autoplay: 2500,
+	speed: 1000,
 	loop: true,
 	autoplayDisableOnInteraction: false
 });

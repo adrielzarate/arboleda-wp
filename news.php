@@ -69,6 +69,10 @@ Template Name: News
 						$old_posts_lang = 'Entrées plus anciennes';
 						$new_posts_lang = 'Entrées plus récentes';
 					}
+					elseif (qtranxf_getLanguage() == 'zh'){
+						$old_posts_lang = '稍早消息';
+						$new_posts_lang = '';
+					}
 
 					next_posts_link( $old_posts_lang, $the_query->max_num_pages );
 					previous_posts_link( $new_posts_lang );

@@ -24,25 +24,37 @@ Template Name: Contact
 				<h3><?php _e('
 			            <!--:es-->Contacto<!--:-->
 			            <!--:en-->Contact<!--:-->
-			            <!--:fr-->Contact<!--:-->');
+			            <!--:fr-->Contact<!--:-->
+			            <!--:zh-->联系方式<!--:-->');
 			          ?></h3>
 				<p>Av. Nueva Tajamar 481</p>
 				<p>Oficina 503, Torre Sur</p>
 				<p><?php _e('
 			            <!--:es-->Teléfono<!--:-->
 			            <!--:en-->Phone<!--:-->
-			            <!--:fr-->Téléphone<!--:-->');
+			            <!--:fr-->Téléphone<!--:-->
+			            <!--:zh-->电话<!--:-->');
 			          ?> (56-2) 2339 9100</p>
 			</div>
 			<div class="col-md-3 contact">
 				<h3>Francisco Bañados</h3>
-				<p>Commercial Director</p>
-				<p><a href="mailto:fbanados@chadwickwines.cl">fbanados@chadwickwines.cl</a></p>
+				<p><?php _e('
+			            <!--:es-->Commercial Director<!--:-->
+			            <!--:en-->Commercial Director<!--:-->
+			            <!--:fr-->Commercial Director<!--:-->
+			            <!--:zh-->商务总监<!--:-->');
+			          ?></p>
+				<p><a href="mailto:fbanados@arboledawines.cl">fbanados@arboledawines.cl</a></p>
 			</div>
 			<div class="col-md-3 contact">
 				<h3>Cinthia Morabito</h3>
-				<p>Marketing Manager</p>
-				<p><a href="mailto:cmorabito@chadwickwines.cl">cmorabito@chadwickwines.cl</a></p>
+				<p><?php _e('
+			            <!--:es-->Marketing Manager<!--:-->
+			            <!--:en-->Marketing Manager<!--:-->
+			            <!--:fr-->Marketing Manager<!--:-->
+			            <!--:zh-->市場经理<!--:-->');
+			          ?></p>
+				<p><a href="mailto:cmorabito@arboledawines.cl">cmorabito@arboledawines.cl</a></p>
 			</div>
 		</div>
 

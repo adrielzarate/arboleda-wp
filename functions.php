@@ -71,6 +71,11 @@ function my_language_class_names($classes) {
 }
 add_filter('body_class','my_language_class_names');
 
+function my_menu_notitle( $menu ){
+  return $menu = preg_replace('/ title=\"(.*?)\"/', '', $menu );
+}
+add_filter( 'wp_nav_menu', 'my_menu_notitle' );
+
 /**
 *
 * WIDGETS

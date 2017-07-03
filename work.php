@@ -55,7 +55,7 @@ Template Name: Work
 
 					<div class="col-md-8 equal-heights" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
 						<div class="hover-show nature-3 equal-heights">
-							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/work/nature-3.jpg" alt="nature-3">
+							<img class="img-responsive fox-pic" src="<?php bloginfo('template_url'); ?>/img/work/nature-3.jpg" alt="nature-3">
 							<p class="hidden-element italic-highlighted phrase"><?php the_field('fox_pic_quote'); ?></p>
 						</div>
 					</div>
@@ -85,7 +85,7 @@ Template Name: Work
 				</div>
 			</div>
 			<div class="col-md-3 equal-heights hidden-sm" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/work/nature-7.jpg" alt="nature-7">
+				<img class="img-responsive nature-7" src="<?php bloginfo('template_url'); ?>/img/work/nature-7.jpg" alt="nature-7">
 			</div>
 		</div>
 

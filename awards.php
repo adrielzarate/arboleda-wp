@@ -38,7 +38,8 @@ Template Name: Awards
 					<a class="arrow arrow-down-gray download-pdf text-center" href="<?php the_sub_field('awarded_wine_year_pdf'); ?>" target="_blank"> <?php _e('
 			            <!--:es-->Ver Todos<!--:-->
 			            <!--:en-->See All<!--:-->
-			            <!--:fr-->Voir Tous<!--:-->');
+			            <!--:fr-->Voir Tous<!--:-->
+			            <!--:zh-->完整内容<!--:-->');
 				        ?> (PDF)</a>
 
 					<?php if( have_rows('awarded_wine_year_gallery') ): ?>
@@ -53,9 +54,18 @@ Template Name: Awards
 											<div class="swiper-wrapper">
 
 											<?php while( have_rows('awards_gallery') ): the_row(); ?>
-												<div class="swiper-slide">
-													<img class="img-responsive" src="<?php the_sub_field('awards_gallery_picture'); ?>" alt="">
-												</div>
+													<?php if(get_sub_field('awards_gallery_text')): ?>
+														<div class="swiper-slide">
+															<div class="text-center align-middle" style="height: 100%">
+																<div><?php the_sub_field('awards_gallery_text'); ?></div>
+															</div>
+														</div>
+													<?php endif; ?>
+													<?php if(get_sub_field('awards_gallery_picture')): ?>
+														<div class="swiper-slide">
+															<img class="img-responsive" src="<?php the_sub_field('awards_gallery_picture'); ?>" alt="">
+														</div>
+													<?php endif; ?>
 											<?php endwhile; ?>
 
 											</div>
