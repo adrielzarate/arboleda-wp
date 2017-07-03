@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+    color: #58585B;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.8em;
+    margin: 0 0 10px;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+small, .small {
+    font-size: 85%;
+}
+
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+.align-middle {
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
